@@ -1,3 +1,10 @@
+'''
+MY SECOND EXAMPLE OF CODE DOCUMENTATION
+In this inventory report i provide code that 
+gives me all the results requested by the instructions
+of the inventory report section of my sprint9assignment.
+'''
+
 import random
 from acme import Product 
 

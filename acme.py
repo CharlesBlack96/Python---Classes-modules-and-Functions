@@ -1,3 +1,13 @@
+'''This message serves me as an example
+of my first documentation
+of my own code.
+What is this code?.....what is it doing?
+this is the code for my initial part of my 
+sprint9 assignment for bloomtech institute.
+here i work on providing classes to represent and provide info for a companies products.
+'''
+
+
 import random
 
 class Product:
