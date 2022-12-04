@@ -5,6 +5,15 @@ What is this code?.....what is it doing?
 this is the code for my initial part of my 
 sprint9 assignment for bloomtech institute.
 here i work on providing classes to represent and provide info for a companies products.
+
+all projects you care about should have a readme and
+propper documentation and an open source LISCENCE!!!!!
+SO YOUR CANT SUE YOUR COMPANY!!
+
+ex) mit liscence
+haven_mit liscence
+
+enable others to legally use your code..necessary
 '''
 
 
