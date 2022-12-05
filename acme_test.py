@@ -64,13 +64,24 @@ def test_product_stealability_3():
 
 def test_product_explode():
 
-    '''test explode method of product class'''
+    '''test explode method of boxingglove class'''
 
     prod = Product('Test Product')
     product = prod.flammability * prod.weight
-    assert (product > 10) is False
-    assert (10 < product < 50) is False
-    assert (product == 10) is True
+    assert (product > 10) == "...fizzle."
+    assert (10 < product < 50) == "...Boom!"
+    assert (product == 10) == "...BABOOM!!"
+
+
+def test_product_punch():
+
+    '''test punch method of boxingglove class'''
+
+    prod = Product('Test Product')
+    product = prod.weight
+    assert (product < 5) == "That tickles."
+    assert (5 <= product < 15) == "Hey that hurt!"
+    assert (product >= 15) == "OUCH!"
 
 
 def test_generate_products():

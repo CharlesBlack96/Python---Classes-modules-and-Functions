@@ -1,4 +1,3 @@
-# pylint: disable=too-many-arguments
 
 '''
 This message serves me as an example
@@ -120,7 +119,7 @@ class BoxingGlove(Product):
 
         if self.weight < 5:
             return "That tickles."
-        if 5 <= self.weight > 15:
+        if 5 <= self.weight < 15:
             return "Hey that hurt!"
 
         return "OUCH!"
