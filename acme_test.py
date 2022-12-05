@@ -1,9 +1,12 @@
+
 '''This mudule contains functions and assert statements
 that create unit tests to test the functionality of most of my functions
 throughout both acme.py and acme_reports.py. designed to help find bugs
 in my code and also to make me think differently
 about the code that i am writing to make it either
 cleaner, more generic and more functional.'''
+
+
 from acme import Product
 from acme_reports import generate_products
 

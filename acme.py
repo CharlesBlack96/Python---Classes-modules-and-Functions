@@ -1,10 +1,12 @@
+
 '''This message serves me as an example
 of my first documentation
 of my own code.
-What is this code?.....what is it doing?
-this is the code for my initial part of my 
+What is this code?. What is it doing?
+This is the code for my initial part of my
 sprint9 assignment for bloomtech institute.
-here i work on providing classes to represent and provide info for a companies products.
+Here i work on providing classes to represent
+info for a company products.
 
 all projects you care about should have a readme and
 propper documentation and an open source LISCENCE!!!!!
@@ -19,16 +21,22 @@ enable others to legally use your code..necessary
 
 import random
 
+
 class Product:
 
     '''
     this is the class docsting
     '''
 
-    def __init__(self, name, price=10, weight=20, flammability=0.5, identifier=random.randint(1000000,9999999)):
+    def __init__(self,
+                 name,
+                 price=10,
+                 weight=20,
+                 flammability=0.5,
+                 identifier=random.randint(1000000, 9999999)):
         '''
-        This is my __init__ function, setting the default settings to all 
-        my attributes of my product class.
+        This is my __init__ function. It sets the default settings for
+        the attributes of my product class.
         '''
         self.name = name
         self.price = price
@@ -46,8 +54,8 @@ class Product:
             return "Not so stealable..."
         if .5 <= quotient < 1.0:
             return "Kinda stealable."
-        else:
-            return "Very stealable!"
+
+        return "Very stealable!"
         
     def explode(self):
         '''
@@ -56,24 +64,13 @@ class Product:
         if a product will fizzle, boom, or baboom!
         '''
         product = self.flammability * self.weight
-        if  product > 10:
+        if product > 10:
             return "...fizzle."
         if 10 <= product < 50:
             return "...Boom!"
-        else:
-            return "...BABOOM!!"
 
-# if __name__ == '__main__':
-#     prod = Product('A cool toy')
+        return "...BABOOM!!"
 
-# print(prod.name)
-# print(prod.price)
-# print(prod.weight)
-# print(prod.flammability)
-# print(prod.identifier)
-
-# print(prod.stealability())
-# print(prod.explode())
 
 class BoxingGlove(Product):
 
@@ -82,8 +79,17 @@ class BoxingGlove(Product):
     has slightly different and/or entirely new methods of its own.
     '''
 
-    def __init__(self, name, price=10, weight=10, flammability=0.5, identifier=random.randint(1000000,9999999)):
-        super().__init__(name, price=10, weight=10, flammability=0.5, identifier=random.randint(1000000,9999999))
+    def __init__(self,
+                 name,
+                 price=10,
+                 weight=10,
+                 flammability=0.5,
+                 identifier=random.randint(1000000, 9999999)):
+        super().__init__(name,
+                         price=10,
+                         weight=10,
+                         flammability=0.5,
+                         identifier=random.randint(1000000, 9999999))
         self.name = name
         self.price = price
         self.weight = weight
@@ -106,16 +112,5 @@ class BoxingGlove(Product):
             return "That tickles."
         if 5 <= self.weight > 15:
             return "Hey that hurt!"
-        else:
-            return "OUCH!"
 
-# if __name__ == '__main__':
-#     prod = BoxingGlove('A cool toy')
-
-# print(prod.name)
-# print(prod.price)
-# print(prod.weight)
-# print(prod.flammability)
-# print(prod.identifier)
-# print(prod.explode())
-# print(prod.punch())
+        return "OUCH!"
