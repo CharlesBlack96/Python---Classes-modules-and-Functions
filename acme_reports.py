@@ -1,3 +1,4 @@
+# pylint: disable=unused-variable
 
 '''
 MY SECOND EXAMPLE OF CODE DOCUMENTATION
@@ -10,16 +11,21 @@ of the inventory report section of my sprint9assignment.
 import random
 
 
-# Useful to use with random.sample or random.choice to generate names
-adjectives = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
+# Useful to use with random.sample or random.choice
+# to generate names
+adjectives = ['Awesome', 'Shiny', 'Impressive', 'Portable',
+              'Improved']
+
 nouns = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 
 
 def name():
 
     '''
-    Name function returns a noun with a descriptor in a string made
-    from a randomly chosen adj from the adj list above, then a space,
+    Name function returns a noun with a descriptor in a
+    string made
+    from a randomly chosen adj from the adj list above,
+    then a space,
     and then a randomly chosen noun after the space.
     '''
 
@@ -29,30 +35,32 @@ def name():
 
 
 def price():
-    
+
     '''
     This price function returns a random integer
     between 5 and 100 to represent
     the price of the product.
     '''
-   
-    return random.randint(5,100)
+
+    return random.randint(5, 100)
 
 
 def weight():
 
     '''
-    this weight function returns a random integer between 5 and 100 to represent 
+    this weight function returns a random integer
+    between 5 and 100 to represent
     the weight of the product.
     '''
 
-    return random.randint(5,100)
+    return random.randint(5, 100)
 
 
 def flammability():
 
     '''
-    The flammability function returns a random float between 0.0 and 2.5 to
+    The flammability function returns a random float
+    between 0.0 and 2.5 to
     represent the rating of a products flammability.
     '''
 
@@ -62,8 +70,9 @@ def flammability():
 def product_tuple():
 
     '''
-    The product_tuple function returns a tuple containing a list of all the
-    results of each of the functions above creating a product tuple with a
+    The product_tuple function returns a tuple containing
+    a list of all the results of each of the functions above
+    creating a product tuple with a
     list of descriptive attributes of a random product.
     '''
 
@@ -229,14 +238,17 @@ def avg_flam_of_prods():
 
 
 def inventory_report():
+
     '''
-    The inventory_report function returns a tuple relationg to the 30 
-    randomly generated productsa from the generated_products function towards
-    the top of the page. relating to take list and all the functions used as the 
-    parameters to this function we are returned a single tuple with a list inside
-    showing the
-    number of unique names in the list, the average price of the products
-    in the list, the avegare weight of the products in the lise, ect....
+    The inventory_report function returns a tuple relationg
+    to the 30 randomly generated productsa from the
+    generated_products function towards the top of the page.
+    relating to take list and all the functions used as the
+    parameters to this function we are returned a single
+    tuple with a list inside showing the
+    number of unique names in the list, the average price of
+    the products in the list, the avegare weight of the
+    products in the lise, ect....
     '''
 
     return (unique_val_of_names(),

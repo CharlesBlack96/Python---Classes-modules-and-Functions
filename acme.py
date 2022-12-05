@@ -1,3 +1,4 @@
+# pylint: disable=too-many-arguments
 
 '''
 This message serves me as an example
