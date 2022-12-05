@@ -21,7 +21,15 @@ import random
 
 class Product:
 
+    '''
+    this is the class docsting
+    '''
+
     def __init__(self, name, price=10, weight=20, flammability=0.5, identifier=random.randint(1000000,9999999)):
+        '''
+        This is my __init__ function, setting the default settings to all 
+        my attributes of my product class.
+        '''
         self.name = name
         self.price = price
         self.weight = weight
@@ -29,6 +37,10 @@ class Product:
         self.identifier = identifier
 
     def stealability(self):
+        '''
+        stealability method. Depending on the products price and weight we are
+        able to calculate how stealable an item is with this function.
+        '''
         quotient = self.price / self.weight
         if quotient < .5:
             return "Not so stealable..."
@@ -38,6 +50,11 @@ class Product:
             return "Very stealable!"
         
     def explode(self):
+        '''
+        explode method. depending of the products flammability score and the 
+        weight of the product we use those values in this function to determine
+        if a product will fizzle, boom, or baboom!
+        '''
         product = self.flammability * self.weight
         if  product > 10:
             return "...fizzle."
@@ -60,6 +77,11 @@ class Product:
 
 class BoxingGlove(Product):
 
+    '''
+    This is my BoxingGlove child class that inherits attributes from my product class and 
+    has slightly different and/or entirely new methods of its own.
+    '''
+
     def __init__(self, name, price=10, weight=10, flammability=0.5, identifier=random.randint(1000000,9999999)):
         super().__init__(name, price=10, weight=10, flammability=0.5, identifier=random.randint(1000000,9999999))
         self.name = name
@@ -69,9 +91,17 @@ class BoxingGlove(Product):
         self.idenitifier = identifier
 
     def explode(self):
+        '''
+        explode method returns "...its a glove."
+        '''
         return "...its a glove."
 
     def punch(self):
+        '''
+        punch method. on the "weight" of the product the method
+        will return weather or not a punch hurts with a 3 different strings.
+
+        '''
         if self.weight < 5:
             return "That tickles."
         if 5 <= self.weight > 15:
