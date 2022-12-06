@@ -8,7 +8,7 @@ cleaner, more generic and more functional.'''
 
 
 from acme import Product
-from acme_reports import generate_products
+from acme_report import generate_products
 
 
 def test_default_product_price():
@@ -68,7 +68,7 @@ def test_product_explode():
 
     prod = Product('Test Product')
     product = prod.flammability * prod.weight
-    assert (product > 10) == "...fizzle."
+    assert (product < 10) == "...fizzle."
     assert (10 < product < 50) == "...Boom!"
     assert (product == 10) == "...BABOOM!!"
 
@@ -84,7 +84,7 @@ def test_product_punch():
     assert (product >= 15) == "OUCH!"
 
 
-def test_generate_products():
+def test_acme_report():
 
     '''
     Test the list size of the generate products function

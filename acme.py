@@ -1,3 +1,4 @@
+# pylint: disable=too-many-arguments
 
 '''
 This message serves me as an example
@@ -62,13 +63,13 @@ class Product:
     def explode(self):
 
         '''
-        Explode method. depending of the products flammability score and the 
+        Explode method. Depending of the products flammability score and the
         weight of the product we use those values in this function to determine
         if a product will fizzle, boom, or baboom!
         '''
 
         product = self.flammability * self.weight
-        if product > 10:
+        if product < 10:
             return "...fizzle."
         if 10 <= product < 50:
             return "...Boom!"
