@@ -36,9 +36,9 @@ def generate_products(num_products=30):
 
     product_list = []
     for item in range(num_products):
-        rand_adj = random.choice(adjectives, 1)
-        rand_nouns = random.choice(nouns, 1)
-        name = rand_adj[0]  + ' ' + rand_nouns[0]
+        rand_adj = random.choice(adjectives)
+        rand_nouns = random.choice(nouns)
+        name = rand_adj + ' ' + rand_nouns
         price = random.randint(5, 100)
         weight = random.randint(5, 100)
         flammability = random.uniform(0.0, 2.5)
@@ -64,12 +64,13 @@ def inventory_report():
     the products in the list, the avegare weight of the
     products in the lise, ect....
     '''
+
     product_list = []
     num_of_unique = len(set(item.name for item in product_list))
-    avg_price = sum([item.price for item in product_list]) / len(product_list)
-    avg_weight = sum([item.weight for
-                     item in product_list]) / len(product_list)
-    flammability = sum([item.flammability for
-                        item in product_list]) / len(product_list)
+    avg_price = sum(item.price for item in product_list) / len(product_list)
+    avg_weight = sum(item.weight for
+                     item in product_list) / len(product_list)
+    flammability = sum(item.flammability for
+                       item in product_list) / len(product_list)
 
     return (num_of_unique, avg_price, avg_weight, flammability)
