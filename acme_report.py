@@ -13,10 +13,10 @@ from acme import Product
 
 # Useful to use with random.sample or random.choice
 # to generate names
-adjectives = ['Awesome', 'Shiny', 'Impressive', 'Portable',
+ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable',
               'Improved']
 
-nouns = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
+NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 
 
 # ====================================
@@ -36,8 +36,8 @@ def generate_products(num_products=30):
 
     product_list = []
     for item in range(num_products):
-        rand_adj = random.choice(adjectives)
-        rand_nouns = random.choice(nouns)
+        rand_adj = random.choice(ADJECTIVES)
+        rand_nouns = random.choice(NOUNS)
         name = rand_adj + ' ' + rand_nouns
         price = random.randint(5, 100)
         weight = random.randint(5, 100)
@@ -51,7 +51,7 @@ def generate_products(num_products=30):
     return product_list
 
 
-def inventory_report():
+def inventory_report(self):
 
     '''
     The inventory_report function returns a tuple relationg
@@ -66,11 +66,12 @@ def inventory_report():
     '''
 
     product_list = []
-    num_of_unique = len(set(item.name for item in product_list))
-    avg_price = sum(item.price for item in product_list) / len(product_list)
-    avg_weight = sum(item.weight for
+    num_of_unique = len(set(self.item.name for item in product_list))
+    avg_price = sum(self.item.price for
+                    item in product_list) / len(product_list)
+    avg_weight = sum(self.item.weight for
                      item in product_list) / len(product_list)
-    flammability = sum(item.flammability for
+    flammability = sum(self.item.flammability for
                        item in product_list) / len(product_list)
 
     return (num_of_unique, avg_price, avg_weight, flammability)
