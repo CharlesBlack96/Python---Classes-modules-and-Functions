@@ -66,6 +66,18 @@ def inventory_report(self):
     '''
 
     product_list = []
+    for item in range(30):
+        rand_adj = random.choice(ADJECTIVES)
+        rand_nouns = random.choice(NOUNS)
+        name = rand_adj + ' ' + rand_nouns
+        price = random.randint(5, 100)
+        weight = random.randint(5, 100)
+        flammability = random.uniform(0.0, 2.5)
+
+        product_list.append(Product(name,
+                                    price=price,
+                                    weight=weight,
+                                    flammability=flammability))
     num_of_unique = len(set(self.item.name for item in product_list))
     avg_price = sum(self.item.price for
                     item in product_list) / len(product_list)
