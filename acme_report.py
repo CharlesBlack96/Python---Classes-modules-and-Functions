@@ -43,7 +43,7 @@ def generate_products(num_products=30):
         weight = random.randint(5, 100)
         flammability = random.uniform(0.0, 2.5)
 
-        product_list.append(Product(name,
+        product_list.append(Product(name=name,
                                     price=price,
                                     weight=weight,
                                     flammability=flammability))
@@ -51,7 +51,7 @@ def generate_products(num_products=30):
     return product_list
 
 
-def inventory_report(self):
+def inventory_report(product_list):
 
     '''
     The inventory_report function returns a tuple relationg
@@ -65,25 +65,12 @@ def inventory_report(self):
     products in the lise, ect....
     '''
 
-    product_list = []
-    for item in range(30):
-        rand_adj = random.choice(ADJECTIVES)
-        rand_nouns = random.choice(NOUNS)
-        name = rand_adj + ' ' + rand_nouns
-        price = random.randint(5, 100)
-        weight = random.randint(5, 100)
-        flammability = random.uniform(0.0, 2.5)
-
-        product_list.append(Product(name,
-                                    price=price,
-                                    weight=weight,
-                                    flammability=flammability))
-    num_of_unique = len(set(self.item.name for item in product_list))
-    avg_price = sum(self.item.price for
+    num_of_unique = len(set(item.name[0] for item in product_list))
+    avg_price = sum(item.price[1] for
                     item in product_list) / len(product_list)
-    avg_weight = sum(self.item.weight for
+    avg_weight = sum(item.weight[2] for
                      item in product_list) / len(product_list)
-    flammability = sum(self.item.flammability for
+    flammability = sum(item.flammability[3] for
                        item in product_list) / len(product_list)
 
     return (num_of_unique, avg_price, avg_weight, flammability)
