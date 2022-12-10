@@ -65,12 +65,12 @@ def inventory_report(product_list):
     products in the lise, ect....
     '''
 
-    num_of_unique = len(set(item.name[0] for item in product_list))
-    avg_price = str(sum(item.price[1] for
-                    item in product_list) / len(product_list))
-    avg_weight = str(sum(item.weight[2] for
-                     item in product_list) / len(product_list))
-    flammability = str(sum(item.flammability[3] for
-                       item in product_list) / len(product_list))
+    num_of_unique = len(set(item.name for item in product_list))
+    avg_price = sum(item.price for
+                    item in product_list) / len(product_list)
+    avg_weight = sum(item.weight for
+                     item in product_list) / len(product_list)
+    flammability = sum(item.flammability for
+                       item in product_list) / len(product_list)
 
     return (num_of_unique, avg_price, avg_weight, flammability)
